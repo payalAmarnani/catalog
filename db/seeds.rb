@@ -20,6 +20,11 @@ Product.create(name:"Mascara",price:"75.00", description:"Thick Lushful Eye Lash
 Product.create(name:"Face Primer",price:"32.00", description:"The perfect pre-party base")
 Product.create(name:"Organiser",price:"50.50", description:"The perfect makeup organiser. Spacious and portable")
 Product.create(name:"Makeup Remover",price:"49.99", description:"The perfect makeup remover.")
+Product.create(name:"Body Wash",price:"25.99", description:"The perfect, fragrant bath and body wash")
+Product.create(name:"Cuticle Oil",price:"19.99", description:"Cuticle Care Oil")
+Product.create(name:"Beauty Blender",price:"5.99", description:"Clenser Kit")
+
+
 
 
 

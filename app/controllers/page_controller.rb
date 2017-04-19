@@ -6,6 +6,10 @@ class PageController < ApplicationController
   end
 # Displays all Catalog Items
   def catalog_item
-  	@products=Product.all
+  	if params[:search]
+  		 @products = Product.search(params[:search])
+  	else
+  		@products=Product.all
+  	end
   end
 end

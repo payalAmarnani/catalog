@@ -1,6 +1,19 @@
 <h1>All Catalog Items</h1>
 
-<h3>Listing Products</h3>
+<div class="container-fluid">
+  <h3>Listing Products</h3>
+  <div class="pull-right">
+    <%= form_tag page_catalog_item_path, :method => 'get' do %>
+      <p>
+       <%= text_field_tag :search, params[:search] %>
+       <%= submit_tag "Search", :name => nil %>
+      </p>
+    <% end %>
+    <% if params[:search]%>
+       <%= link_to "Back To All Results", page_catalog_item_path%>
+    <%end%>
+  </div>
+</div>
 
 <table class="table">
   <thead>

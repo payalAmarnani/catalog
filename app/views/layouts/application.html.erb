@@ -2,26 +2,23 @@
 <html>
 <head>
   <title>Catalog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class="navbar navbar-default">
-<div class="container-fluid">
-<button><%= link_to "Home", page_main_path%></button>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<button class="btn btn-default navbar-btn"><%= link_to "Home", page_main_path%></button>
+			<button class="btn btn-default navbar-btn"><%= link_to "All Products", page_catalog_item_path %></button>
+			<button class="btn btn-default navbar-btn"><%= link_to "Admin", products_path%> </button>
+		</div>
+	</nav>
 
-<button><%= link_to "All Products", page_catalog_item_path %></button>
-
-<button><%= link_to "Admin", products_path%> </button>
-
-</div>
-</nav>
-<div class="container-fluid">
-<%= yield %>
-</div>
+	<div class="container-fluid">
+		<%= yield %>
+	</div>
 </body>
 </html>
